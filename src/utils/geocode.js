@@ -15,6 +15,7 @@ const request = require('postman-request')
 //     console.log("Longitude: " + longitude + "\nLatitude : "+ latitude)
 //   }
 // })
+
 const geocode = (address, callback) =>{
   const mapUrl = `https://api.mapbox.com/geocoding/v5/mapbox.places/${encodeURIComponent(address)}.json?access_token=pk.eyJ1Ijoic3RhdGFpY2JsYXplIiwiYSI6ImNsMWJ2N212cjAwdTUzbHRmbHNhaWd6ajUifQ.tt5A-uTKgZkD-nhwA2SrnA&limit=1`
   request({url: mapUrl, json: true }, (error, {body}) =>{
